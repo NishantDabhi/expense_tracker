@@ -37,11 +37,18 @@ dependencies:
   cupertino_icons: ^1.0.2
   uuid: ^4.3.3
   intl: ^0.19.0
+  flutter_launcher_icons: ^0.13.1
+  firebase_database: ^10.4.9
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/money.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

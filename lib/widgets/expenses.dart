@@ -1,5 +1,7 @@
 // this file is main screen of app and appears first , kind of home screen
 
+import 'dart:convert';
+
 import 'package:expense_tracker/widgets/chart/chart.dart';
 import 'package:expense_tracker/widgets/expenses_list/expense_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
@@ -17,21 +19,19 @@ class Expenses extends StatefulWidget {
 }
 
 class _ExpensesState extends State<Expenses> {
-  final List<Expense> _registeredExpenses = [
-    Expense(title: 'Test 1', amount: 12.65, date: DateTime.now() , category: Category.food),
-    Expense(title: 'Test 2', amount: 45.98, date: DateTime.now() , category: Category.leisure),
-    Expense(title: 'Test 3', amount: 89.62, date: DateTime.now() , category: Category.work),
-    Expense(title: 'Test 4', amount: 48.25, date: DateTime.now() , category: Category.travel),
-  ];
+  final List<Expense> _registeredExpenses = [];
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
       isScrollControlled: true,
         context: context,
-        builder: (ctx) => NewExpense(onAddExpense: _addExpense,));
+        builder: (ctx) => NewExpense(
+          onAddExpense: _addExpense,
+        ));
   }
 
-  void _addExpense(Expense expense) {
+  void _addExpense(Expense expense)  {
+
     setState(() {
       _registeredExpenses.add(expense);
     });

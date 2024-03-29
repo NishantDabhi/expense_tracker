@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:http/http.dart' as http;
 
 final formatter  = DateFormat.yMd();
 
@@ -33,7 +36,7 @@ class _NewExpenseState extends State<NewExpense> {
 
 
 
-    void _submitExpenseData() {
+    void _submitExpenseData()  {
       final enteredAmount = double.tryParse(_amountController.text); //tryParse('Hello') => Null and tryParse('1.12') => 1.12
       final amountIsInvalid = enteredAmount == null || enteredAmount <= 0;
 
@@ -49,6 +52,23 @@ class _NewExpenseState extends State<NewExpense> {
         ));
         return;
       }
+
+      // final url = Uri.https('expense-tracker-49f75-default-rtdb.firebaseio.com', 'expense-list.json');
+      //
+      // final response = await http.post(
+      //     url,
+      //     headers: { 'Content-Type' : 'application/json' },
+      //     body: json.encode({
+      //       'title': _titleController.text,
+      //       'amount': enteredAmount,
+      //       'date': _selectedDate.toString(),
+      //       'category': _selectedCategory.name
+      //     })
+      // );
+      //
+      // print(response.body);
+      // print(response.statusCode);
+
       widget.onAddExpense(Expense(title: _titleController.text, amount: enteredAmount, date: _selectedDate!, category: _selectedCategory));
       Navigator.pop(context);
     }
@@ -115,7 +135,7 @@ class _NewExpenseState extends State<NewExpense> {
             const Spacer(),
             ElevatedButton(onPressed: () { _submitExpenseData(); }, child: const Text('Add Expense')),
             const SizedBox(width: 8,),
-            ElevatedButton(onPressed: () { Navigator.pop(context); }, child: const Text('Cancel'))
+            TextButton(onPressed: () { Navigator.pop(context); }, child: const Text('Cancel'))
           ],
         )
       ],
