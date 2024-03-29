@@ -4,7 +4,14 @@
 Flutter Expense Tracker APK is a mobile application developed using Flutter that helps users track their expenses. The app features an intuitive interface with a home page displaying a list of expenses and attractive charts created with the ChartBar widget for easy visualization. Users can add new expenses, remove existing ones, and switch between light and dark modes for better visibility.
 
 ## Screenshots
-[Include screenshots of your app here, showcasing the user interface in both light and dark modes]
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/05c5a446-5f2c-4175-901b-b4cf1e7d7288" height="440">
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/62b5541d-b66a-474e-8f97-f890066354a4" height="440">
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/6090353e-9108-4265-bcd4-fff1d60c1553" height="440">
+
+### Dark Mode
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/a6cddf45-6e64-4279-b7cd-dfe16bf9e725" height="440">
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/d2de564d-f276-4583-8b75-5e43d917d689" height="440">
+<img src="https://github.com/NishantDabhi/expense_tracker/assets/101393352/f98551c1-0ea1-4e04-9b1e-3cb5082b4a1f" height="440">
 
 ## Features
 - Home Page with ListView displaying a list of expenses and attractive charts for expense comparison.
