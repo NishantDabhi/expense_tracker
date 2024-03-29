@@ -1,16 +1,34 @@
-# expense_tracker
+# Flutter Expense Tracker APK
 
-A new Flutter project.
+## Description
+Flutter Expense Tracker APK is a mobile application developed using Flutter that helps users track their expenses. The app features an intuitive interface with a home page displaying a list of expenses and attractive charts created with the ChartBar widget for easy visualization. Users can add new expenses, remove existing ones, and switch between light and dark modes for better visibility.
 
-## Getting Started
+## Screenshots
+[Include screenshots of your app here, showcasing the user interface in both light and dark modes]
 
-This project is a starting point for a Flutter application.
+## Features
+- Home Page with ListView displaying a list of expenses and attractive charts for expense comparison.
+- Second Screen for adding details of a new expense.
+- Add Expense Button to add new expenses and refresh the home screen.
+- Support for dark mode to enhance user experience.
+- Use of Dismissible widget for removing expenses from the home screen.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Run `flutter pub get` to install dependencies.
+4. Connect your device or start an emulator.
+5. Run `flutter run` to launch the app on your device/emulator.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Usage
+- On the Home Page, users can view a list of expenses along with charts representing expense comparisons.
+- Tap on the Add Expense Button to navigate to the second screen for adding details of a new expense.
+- After adding an expense, users will be redirected to the home screen, where they can view the updated list of expenses and charts.
+- Swipe left on an expense to remove it using the Dismissible widget.
+- Toggle between light and dark modes for better visibility, if needed.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Configuration
+- No additional configuration required.
+
+## Credits
+- This app utilizes the Flutter framework: [Flutter](https://flutter.dev/)
